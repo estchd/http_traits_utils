@@ -1,3 +1,4 @@
+use std::fmt::{Debug};
 use url::{Url};
 use http_traits::basic_authenticated_client::BasicAuthenticatedClient;
 use http_traits::bearer_authenticated_client::BearerAuthenticatedClient;
@@ -16,7 +17,7 @@ impl <T: Client> ToBaseUrlClient<T> for T {
 	}
 }
 
-
+#[derive(Clone, Debug)]
 pub struct BaseUrlClient<'a, T: Client> {
 	client: &'a T,
 	base_url: Url
@@ -74,7 +75,7 @@ impl <T: Client> ToOwnedBaseUrlClient<T> for T {
 	}
 }
 
-
+#[derive(Clone, Debug)]
 pub struct OwnedBaseUrlClient<T: Client> {
 	client: T,
 	base_url: Url

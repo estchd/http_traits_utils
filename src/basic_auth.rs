@@ -18,7 +18,7 @@ impl <T: Client> ToBasicAuthClient<T> for T {
 	}
 }
 
-
+#[derive(Clone, Debug)]
 pub struct BasicAuthClient<'a, T: Client> {
 	client: &'a T,
 	username: String,

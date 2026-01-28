@@ -17,6 +17,7 @@ impl <T: Client> ToBearerAuthClient<T> for T {
 	}
 }
 
+#[derive(Clone, Debug)]
 pub struct BearerAuthClient<'a, T: Client> {
 	client: &'a T,
 	token: String,
