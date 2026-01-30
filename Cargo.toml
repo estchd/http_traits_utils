@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-http_traits = { git = "https://github.com/estchd/http_traits",  rev = "16221c2365cf2129ad0a74cd25af2da1f853be52" }
+http_traits = { git = "https://github.com/estchd/http_traits",  rev = "df167a03c04d9f0c34bb14ab7bafd59c0876fd0a" }
 url = "2.5.7"
